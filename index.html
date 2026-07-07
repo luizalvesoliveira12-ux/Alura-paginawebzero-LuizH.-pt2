@@ -1,4 +1,4 @@
-3<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,7 @@
     <title>Meu Blog Tech</title>
     <style>
         header{
-            background-color: rgba(9, 158, 218, 0.555);
+            background-color:#2d405e;
             color: black;
             text-align: center;
             max-width: 800px;
@@ -28,6 +28,10 @@
         }
         .artigo-autor{
             font-weight:bold;
+        }
+        .direito{
+            text-align: center;
+         color: #2d405e;
         }
     </style>
 </head>
@@ -67,7 +71,7 @@
                 <li> <b>Red Dead Redemption 2 - 2018 - PS4 / Xbox One / PC</b></li>
                 <li><b>Elden Ring - 2022 Multiplataforma</b></li>
                 <li><b>Super Mario Bros. - 1995 - NES</b></li>
-                <li><b>Minecraft - 2011 - Multiplataforma</b>	</li> 
+                <li><b>Minecraft - 2011 - Multiplataforma</b></li> 
             </ul>
             <button>♡<span>0</span></button>
             <button>💬<span>0</span></button>
@@ -76,7 +80,30 @@
         </article>
     </main>
     <footer>
-        <p class="direito">Todos os Direitos São Reservados ao autor do blog-𝕷ᥙіz 𝕳ᥱᥒrі𝗊ᥙᥱ ✌🏻⃢🗿</p>
+        <p class="direito">Todos os Direitos São Reservados ao autor do blog<b>-𝕷ᥙіz 𝕳ᥱᥒrі𝗊ᥙᥱ</b>✌🏻⃢🗿</p>
     </footer>
 </body>
+<script>
+    
+const botoes = document.querySelectorAll("button");
+
+botoes.forEach(function (botao) {
+let curtiu = false;
+botao.addEventListener("click", botaoClicado);
+
+function botaoClicado() {
+console.log("fui clicado");
+let texto = botao.querySelector("span");
+
+if (curtiu === false) {
+texto.textContent++;
+curtiu = true;
+} else {
+texto.textContent--;
+curtiu = false;
+}
+}
+})
+ </script>
 </html>
+
